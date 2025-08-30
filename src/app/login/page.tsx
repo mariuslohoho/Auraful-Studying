@@ -4,6 +4,7 @@ import { useSearchParams } from "next/navigation";
 import { GalleryVerticalEnd } from "lucide-react";
 
 import { LoginForm } from "@/components/login/login-form";
+import { Suspense } from "react";
 
 export default function LoginPage() {
   const searchparams = useSearchParams();
@@ -18,7 +19,9 @@ export default function LoginPage() {
           </div>
           Auraful Studying
         </a>
-        <LoginForm redirectTo={redirectTo} />
+        <Suspense>
+          <LoginForm redirectTo={redirectTo} />
+        </Suspense>
       </div>
     </div>
   );
