@@ -1,15 +1,10 @@
-"use client";
-import { useSearchParams } from "next/navigation";
+"use server";
 
 import { GalleryVerticalEnd } from "lucide-react";
 
 import { LoginForm } from "@/components/login/login-form";
-import { Suspense } from "react";
 
 export default function LoginPage() {
-  const searchparams = useSearchParams();
-  const redirectTo = searchparams.get("redirectTo") as string | undefined;
-
   return (
     <div className="bg-muted flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
       <div className="flex w-full max-w-sm flex-col gap-6">
@@ -19,9 +14,7 @@ export default function LoginPage() {
           </div>
           Auraful Studying
         </a>
-        <Suspense>
-          <LoginForm redirectTo={redirectTo} />
-        </Suspense>
+        <LoginForm />
       </div>
     </div>
   );

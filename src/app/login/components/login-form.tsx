@@ -1,9 +1,8 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
+import { useSearchParams } from "next/navigation";
 import React from "react";
 import { SigninWithGoogle } from "./actions";
 
@@ -12,7 +11,10 @@ interface props extends React.ComponentProps<"div"> {
   redirectTo?: string;
 }
 
-export function LoginForm({ className, redirectTo, ...props }: props) {
+export function LoginForm({ className, ...props }: props) {
+  const searchparams = useSearchParams();
+  const redirectTo = searchparams.get("redirectTo") as string | undefined;
+
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
