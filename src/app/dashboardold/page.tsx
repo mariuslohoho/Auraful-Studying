@@ -1,6 +1,5 @@
 "use server";
 import { createClient } from "@/utils/supabase/server";
-import { redirect } from "next/navigation";
 import { SignOut } from "./action";
 
 export default async function Page() {
