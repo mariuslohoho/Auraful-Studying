@@ -1,5 +1,6 @@
 import { GalleryVerticalEnd } from "lucide-react";
 
+import { Suspense } from "react";
 import { LoginForm } from "./components/login-form";
 
 export default function LoginPage() {
@@ -12,7 +13,9 @@ export default function LoginPage() {
           </div>
           Auraful Studying
         </a>
-        <LoginForm />
+        <Suspense>
+          <LoginForm />
+        </Suspense>
       </div>
     </div>
   );
