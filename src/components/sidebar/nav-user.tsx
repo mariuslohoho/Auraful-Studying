@@ -27,7 +27,7 @@ export function NavUser() {
 
   useEffect(() => {
     const supabase = createClient();
-    supabase.auth.getUser().then(({ data, error }) => {
+    supabase.auth.getUser().then(({ data }) => {
       setUser({
         name: data.user?.user_metadata.full_name,
         email: data.user?.email || "",

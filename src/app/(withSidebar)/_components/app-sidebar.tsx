@@ -4,9 +4,7 @@ import * as React from "react";
 
 import * as data from "../sidebar";
 
-import { NavDocuments } from "@/app/(withSidebar)/_components/nav-documents";
 import { NavMain } from "@/app/(withSidebar)/_components/nav-main";
-import { NavSecondary } from "@/app/(withSidebar)/_components/nav-secondary";
 import { NavUser } from "@/app/(withSidebar)/_components/nav-user";
 import {
   Sidebar,

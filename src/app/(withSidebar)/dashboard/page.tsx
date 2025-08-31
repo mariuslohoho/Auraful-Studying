@@ -1,4 +1,3 @@
-import { ChartAreaInteractive } from "@/components/chart-area-interactive";
 import { Timer } from "./_components/Timer";
 
 export default function Page() {
