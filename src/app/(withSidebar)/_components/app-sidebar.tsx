@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import * as data from "./sidebar";
+import * as data from "../sidebar";
 
 import { NavDocuments } from "@/app/(withSidebar)/_components/nav-documents";
 import { NavMain } from "@/app/(withSidebar)/_components/nav-main";

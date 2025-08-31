@@ -17,4 +17,9 @@ export const routes: item[] = [
     url: "/test",
     icon: IconBug,
   },
+  {
+    title: "Widgets Test",
+    url: "/widgets_test",
+    icon: IconBug,
+  },
 ];
