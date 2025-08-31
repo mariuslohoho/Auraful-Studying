@@ -7,7 +7,6 @@ import { NextResponse } from "next/server";
 import { createClient } from "@/utils/supabase/server";
 
 export async function GET(request: Request) {
-  console.log("eee");
   const { searchParams, origin } = new URL(request.url);
   const code = searchParams.get("code");
   // if "next" is in param, use it as the redirect URL
@@ -33,8 +32,6 @@ export async function GET(request: Request) {
       }
     }
   }
-
-  console.log(`callback {code}`);
 
   // return the user to an error page with instructions
   return NextResponse.redirect(`${origin}/auth/auth-code-error`);
